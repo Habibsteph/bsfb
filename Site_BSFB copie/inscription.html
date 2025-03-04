@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscription - Basketball School</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" href="images/Icone.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css2?family=University&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="images/Logo_blanc.png" alt="Basketball School Logo">
+        </div>
+        <nav>
+            <a href="Index.html">Accueil</a>
+            <a href="a-propos.html">A propos</a>
+            <a href="inscription.html" class="active">Inscription</a>
+            <a href="contact.html">Contacts</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <h2>INSCRIPTION</h2>
+            <form class="inscription-form" method="POST" action="traitement.php">
+                <!-- Nom de l'équipe -->
+                <div class="form-group">
+                    <label for="nom-equipe">Nom de l'équipe:</label>
+                    <input type="text" id="nom-equipe" name="nom_equipe" required>
+                </div>
+
+                <!-- Nombre de joueurs -->
+                <div class="form-group">
+                    <label for="nombre-joueurs">Numero de telephone:</label>
+                    <input type="int" id="numero-telephone" name="numero_telephone" required>
+                </div>
+
+                <!-- Type d'équipe -->
+                <div class="form-group">
+                    <label></label>
+                    <div class="checkbox-group">
+                        <input type="radio" id="masculine" name="type_equipe" value="Masculine" required>
+                        <label for="masculine">Masculine</label>
+
+                        <input type="radio" id="feminine" name="type_equipe" value="Féminine" required>
+                        <label for="feminine">Féminine</label>
+                    </div>
+                </div>
+
+                <!-- Choix de la commune -->
+                <div class="form-group">
+                    <label for="commune">Commune:</label>
+                    <select id="commune" name="commune" required>
+                        <option value="">Sélectionnez une commune</option>
+                        <option value="Cocody">Cocody</option>
+                        <option value="Abobo">Abobo</option>
+                        <option value="Adjamé">Adjamé</option>
+                        <option value="Yopougon">Yopougon</option>
+                        <option value="Plateau">Plateau</option>
+                        <option value="Koumassi">Koumassi</option>
+                        <option value="Marcory">Marcory</option>
+                        <option value="Port-Bouët">Port-Bouët</option>
+                        <option value="Treichville">Treichville</option>
+                        <option value="Attécoubé">Attécoubé</option>
+                        <option value="Bingerville">Bingerville</option>
+                    </select>
+                </div>
+
+                <!-- Bouton de soumission -->
+                <button type="submit" class="button">S'inscrire maintenant</button>
+            </form>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Baller's free babi. Tous droits réservés.</p>
+        <div class="social-media">
+        <a href="https://www.facebook.com/share/1AFajMocZz/?mibextid=wwXIfr" target="_blank"><img src="images/facebook-icon.png" alt="Facebook"></a>
+            <a href="https://www.instagram.com/baller.s_free_babi?igsh=MWJzenRnYWlpcnJjdA==" target="_blank"><img src="images/instagram-icon.png" alt="Instagram"></a>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <?php
+include 'config.php';
+echo "Connexion réussie à la base de données !";
+?>
+
+</body>
+</html>
